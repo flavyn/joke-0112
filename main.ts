@@ -1,8 +1,4 @@
-import { mkdirSync, writeFileSync } from "node:fs";
-import { join } from "node:path";
+import { writeFileSync } from 'node:fs';
 
-const joke = "My AI coding agent and I split the demo: it hallucinated the features, I hallucinated the confidence.";
-const outputDir = process.env.MAKEFUN_OUTPUT_DIR ?? "/output";
-
-mkdirSync(outputDir, { recursive: true });
-writeFileSync(join(outputDir, "entry.txt"), joke, "utf8");
+// Write the exact entry text without a trailing newline.
+writeFileSync('/output/entry.txt', "The demo crashed, so my AI coding agent renamed the meeting 'Incident Response Training'.", 'utf8');
